@@ -1,0 +1,1 @@
+doc("travel.xml")//flight[@from="DFW" and @to="JFK" and date="11/20/2014"]

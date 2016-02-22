@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<travel xmlns="http://tempuri.org/flight"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://tempuri.org/flight file:/D:/MSC/Sem1/Web%20Data%20Management%20and%20XML/Project7/flight.xsd">
+    <passenger ssn="ID001">
+        <name>name0</name>
+        <address>address0</address>
+    </passenger>
+    <passenger ssn="ID003">
+        <name>name1</name>
+        <address>address1</address>
+    </passenger>
+    <reservation passenger="ID001" flight="ID002">
+        <creditcard>creditcard0</creditcard>
+    </reservation>
+    <reservation passenger="ID001" flight="ID003">
+        <creditcard>creditcard1</creditcard>
+    </reservation>
+    <passenger ssn="ID005">
+        <name>name2</name>
+        <address>address2</address>
+    </passenger>
+</travel>

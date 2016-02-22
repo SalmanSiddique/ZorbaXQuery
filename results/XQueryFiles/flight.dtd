@@ -1,0 +1,15 @@
+<!ELEMENT travel (airport | flight | passenger | reservation)*>
+<!ELEMENT airport (name)>
+    <!ATTLIST airport code ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT flight (date,departureTime,arrivalTime)>
+    <!ATTLIST flight id ID  #REQUIRED from IDREF #REQUIRED to IDREF #REQUIRED>   
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT departureTime (#PCDATA)>
+<!ELEMENT arrivalTime (#PCDATA)>
+<!ELEMENT passenger (name,address)>
+    <!ATTLIST passenger ssn ID #REQUIRED>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT reservation (creditcard)>
+    <!ATTLIST reservation passenger IDREF #REQUIRED flight IDREF #REQUIRED>
+<!ELEMENT creditcard (#PCDATA)>

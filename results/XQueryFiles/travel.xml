@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE collection SYSTEM "flight.dtd">
+<travel>
+	<passenger ssn="I400006601">
+        <name>John Smith</name>
+        <address>400 S Oak St, Arlington, TX 76010, USA</address>
+    </passenger>
+    <passenger ssn="I400006602">
+        <name>Mary Smith</name>
+        <address>605 S Main St, Dallas, TX 76123, USA</address>
+    </passenger>
+	<passenger ssn="I400006603">
+        <name>John Gurak</name>
+        <address>123 Any Street, Fort Worth, TX 76334, USA</address>
+    </passenger>
+	<reservation passenger="I400006601" flight="f1">
+        <creditcard>1234-5678-9012-3412</creditcard>
+    </reservation>
+    <reservation passenger="I400006601" flight="f3">
+        <creditcard>1234-5678-9012-3412</creditcard>
+    </reservation>
+	<reservation passenger="I400006602" flight="f4">
+        <creditcard>5678-1234-9012-3412</creditcard>
+    </reservation>
+	<reservation passenger="I400006603" flight="f2">
+        <creditcard>9012-1234-5678-3412</creditcard>
+    </reservation>
+	<reservation passenger="I400006603" flight="f1">
+        <creditcard>9012-1234-5678-3412</creditcard>
+    </reservation>
+	<flight id="f1" from="DFW" to="JFK">
+        <date>11/20/2014</date>
+        <departureTime>06:00AM</departureTime>
+        <arrivalTime>07:30AM</arrivalTime>
+    </flight>
+	<flight id="f2" from="DFW" to="JFK">
+        <date>11/20/2014</date>
+        <departureTime>05:00PM</departureTime>
+        <arrivalTime>08:30PM</arrivalTime>
+    </flight>
+	<flight id="f3" from="HOU" to="DFW">
+        <date>11/10/2014</date>
+        <departureTime>07:00PM</departureTime>
+        <arrivalTime>07:30AM</arrivalTime>
+    </flight>
+	<flight id="f4" from="JFK" to="HOU">
+        <date>10/01/2014</date>
+        <departureTime>10:00AM</departureTime>
+        <arrivalTime>12:30PM</arrivalTime>
+    </flight>
+    <airport code="DFW">
+        <name>Dallas/Fort Worth, TX</name>
+    </airport>
+	<airport code="JFK">
+        <name>New York, NY - Kennedy</name>
+    </airport>
+	<airport code="HOU">
+        <name>Houston, TX - All airports</name>
+    </airport>
+</travel>

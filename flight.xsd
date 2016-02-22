@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/flight" elementFormDefault="qualified" targetNamespace="http://tempuri.org/flight" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="travel">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="airport" />
+        <xs:element ref="flight" />
+        <xs:element ref="passenger" />
+        <xs:element ref="reservation" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="airport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" />
+      </xs:sequence>
+      <xs:attribute name="code" type="xs:ID" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string" />
+  <xs:element name="flight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="date" />
+        <xs:element ref="departureTime" />
+        <xs:element ref="arrivalTime" />
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="required" />
+      <xs:attribute name="from" type="xs:IDREF" use="required" />
+      <xs:attribute name="to" type="xs:IDREF" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="date" type="xs:string" />
+  <xs:element name="departureTime" type="xs:string" />
+  <xs:element name="arrivalTime" type="xs:string" />
+  <xs:element name="passenger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" />
+        <xs:element ref="address" />
+      </xs:sequence>
+      <xs:attribute name="ssn" type="xs:ID" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="address" type="xs:string" />
+  <xs:element name="reservation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="creditcard" />
+      </xs:sequence>
+      <xs:attribute name="passenger" type="xs:IDREF" use="required" />
+      <xs:attribute name="flight" type="xs:IDREF" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="creditcard" type="xs:string" />
+</xs:schema>

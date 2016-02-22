@@ -1,0 +1,1 @@
+Please note that there are six .xq files inside the zipped folder, one for each query along with the xml file.
